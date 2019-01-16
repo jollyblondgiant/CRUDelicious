@@ -1,0 +1,14 @@
+@using CRUDelicious.Models;
+<a href="/">Go home</a>
+@model Dish
+<h1>@Model.DishName !</h1>
+<p> --By--</p>
+<h2>@Model.ChefName</h2>
+
+<p>@Model.Description</p>
+
+<h3>Calories:</h3> @Model.Calories
+<h3>Tastiness: </h3> @Model.Tastiness
+<br>
+<a href = "delete/@Model.ID">Delete</a>
+<a href = "update/@Model.ID">Edit</a>

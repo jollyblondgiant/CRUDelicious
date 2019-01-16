@@ -1,0 +1,28 @@
+@using CRUDelicious.Models;
+<a href="/">Home</a>
+<h2>Add a New Dish!</h2>
+
+@model Dish
+<form asp-action="CreateDish" asp-controller="Home" method="post">
+    <span asp-validation-for="ChefName"></span>
+    <label asp-for="ChefName"></label>
+    <input asp-for="ChefName">
+
+    <span asp-validation-for="DishName"></span>
+    <label asp-for="DishName"></label>
+    <input asp-for="DishName">
+
+    <span asp-validation-for="Calories"></span>
+    <label asp-for="Calories"></label>
+    <input type="number" min="0" asp-for="Calories">
+
+    <span asp-validation-for="Tastiness"></span>
+    <label asp-for="Tastiness"></label>
+    <input type="number" min="1" max="5" asp-for="Tastiness">
+
+    <span asp-validation-for="Description"></span>
+    <label asp-for="Description"></label>
+    <input type="textarea" asp-for="Description">
+
+    <input value="Add Dish!" type="Submit">
+</form>
